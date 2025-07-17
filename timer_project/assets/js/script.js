@@ -74,7 +74,6 @@ function updateDisplayTimer() {
 function startTimer() {
     if (timer !== null) return;
 
-    // Get input seconds and convert to numbers
     let totalSeconds = 0;
     if (timerSeconds <= 0) {
         inputTimer = document.getElementById('input-seconds').value;
@@ -86,7 +85,6 @@ function startTimer() {
     console.log("Timer started with input: " + inputTimer);
 
     timer = setInterval(() => {
-        // Decrement timer
         if (timerSeconds > 0) {
             timerSeconds--;
         } else if (timerMinutes > 0) {
