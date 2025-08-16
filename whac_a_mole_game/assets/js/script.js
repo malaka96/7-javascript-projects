@@ -10,7 +10,7 @@ console.log(Math.floor(Math.random() * 10));
 let hitPosition;
 let result = 0;
 let timerId = null;
-let currentTime = 20;
+let currentTime = 10;
 
 function randomSquare(){
     squares.forEach(element => {
@@ -41,7 +41,7 @@ function moveMole(){
 function countDown(){
     currentTime--;
     timeLeft.textContent = currentTime;
-    if(currentTime <= 0){
+    if(currentTime == -1){
         timeLeft.textContent = 0;
         clearInterval(countDownId);
         clearInterval(timerId);
